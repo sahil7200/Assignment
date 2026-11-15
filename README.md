@@ -206,18 +206,18 @@ When Arabic is selected, the app sets `I18nManager.allowRTL(true)` and `I18nMana
 
 ## Screenshots
 
-No screenshot image files are currently included. Capture genuine screenshots from Expo Go or a simulator/browser and add them to a `screenshots/` directory before submission; do not use placeholder images. Required captures:
+The following screenshots were captured from the running Expo web app using DummyJSON product data and a demo login. The cart and favourites captures show a populated local state. For a submission that specifically requires device screenshots, recapture these screens from Expo Go or a simulator as well.
 
 | Screen | Suggested filename |
 | --- | --- |
-| Login | `screenshots/login.png` |
-| Signup | `screenshots/signup.png` |
-| OTP verification | `screenshots/otp-verification.png` |
-| Product listing | `screenshots/product-listing.png` |
-| Product details | `screenshots/product-details.png` |
-| Cart | `screenshots/cart.png` |
-| Favourites | `screenshots/favourites.png` |
-| Settings | `screenshots/settings.png` |
+| Login | [screenshots/login.png](screenshots/login.png) |
+| Signup | [screenshots/signup.png](screenshots/signup.png) |
+| OTP verification | [screenshots/otp-verification.png](screenshots/otp-verification.png) |
+| Product listing | [screenshots/product-listing.png](screenshots/product-listing.png) |
+| Product details | [screenshots/product-details.png](screenshots/product-details.png) |
+| Cart | [screenshots/cart.png](screenshots/cart.png) |
+| Favourites | [screenshots/favourites.png](screenshots/favourites.png) |
+| Settings | [screenshots/settings.png](screenshots/settings.png) |
 
 The OTP screenshot should show the test-code screen without exposing real credentials. Consider adding an Arabic RTL screenshot and a dark-theme screenshot if the submission accepts extra images.
 
