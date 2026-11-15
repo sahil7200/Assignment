@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="240" viewBox="0 0 900 240">
+  <rect x="12" y="42" width="156" height="156" rx="24" fill="#184C43"/>
+  <path d="M62 88h56l9 76H53l9-76Z" fill="#D5F36A"/>
+  <path d="M77 91V75a13 13 0 0 1 26 0v16" fill="none" stroke="#D5F36A" stroke-linecap="round" stroke-width="9"/>
+  <path d="M83 115v19m14-19v19" stroke="#184C43" stroke-linecap="round" stroke-width="6"/>
+  <text x="204" y="133" fill="#1C2A26" font-family="Georgia, serif" font-size="58" font-weight="700">MORROW</text>
+  <text x="208" y="174" fill="#718078" font-family="Arial, sans-serif" font-size="21" font-weight="700" letter-spacing="7">MARKET</text>
+</svg>

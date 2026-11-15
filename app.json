@@ -32,6 +32,19 @@
           }
         }
       ],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/morrow-splash.png",
+          "imageWidth": 280,
+          "resizeMode": "contain",
+          "backgroundColor": "#F3F4EF",
+          "dark": {
+            "image": "./assets/morrow-splash-dark.png",
+            "backgroundColor": "#101916"
+          }
+        }
+      ],
       "expo-sqlite",
       "expo-secure-store",
       "expo-localization",

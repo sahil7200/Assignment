@@ -1,12 +1,19 @@
 import { Stack } from 'expo-router';
+import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
-import { I18nManager, View } from 'react-native';
+import { I18nManager, Platform, View } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { StartupScreen } from '../src/components/StartupScreen';
 import { getDatabase } from '../src/db/database';
 import i18n from '../src/i18n';
 import { useAppStore } from '../src/store/useAppStore';
 import { themes } from '../src/theme/tokens';
+
+if (Platform.OS !== 'web') {
+  SplashScreen.setOptions({ duration: 450, fade: true });
+  void SplashScreen.preventAutoHideAsync().catch(() => undefined);
+}
 
 export default function RootLayout() {
   const bootstrapped = useAppStore((state) => state.bootstrapped);
@@ -18,6 +25,12 @@ export default function RootLayout() {
   useEffect(() => {
     void getDatabase().then(hydrate).catch(() => hydrate());
   }, [hydrate]);
+
+  useEffect(() => {
+    if (bootstrapped && Platform.OS !== 'web') {
+      void SplashScreen.hideAsync();
+    }
+  }, [bootstrapped]);
 
   useEffect(() => {
     void i18n.changeLanguage(language);
@@ -39,7 +52,7 @@ export default function RootLayout() {
             <Stack.Screen name="(tabs)" />
             <Stack.Screen name="product/[id]" options={{ presentation: 'card' }} />
           </Stack>
-        ) : null}
+        ) : Platform.OS === 'web' ? <StartupScreen /> : null}
       </View>
     </SafeAreaProvider>
   );

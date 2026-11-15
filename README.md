@@ -41,6 +41,8 @@ npx expo start --web
 
 The Expo Router entry point is `expo-router/entry` as configured in `package.json`.
 
+The branded native splash screen is configured with the `expo-splash-screen` plugin. It uses separate light and dark Morrow Market logo assets and remains visible until the initial database/session hydration finishes. The web target shows the matching logo as its bootstrap screen. Expo Go may not reproduce the configured native splash exactly; verify the final appearance in an Android/iOS development or release build.
+
 ## Environment and Configuration
 
 No `.env` file, API key, or secret is required. The API base URL is `https://dummyjson.com`, configured in `src/services/api.ts`.
@@ -96,6 +98,7 @@ package.json               Scripts and dependency manifest
 | `i18next` | Translation engine and English fallback configuration. |
 | `react-i18next` | React integration, including the `useTranslation` hook. |
 | `expo-image` | Product images with image loading and transitions. |
+| `expo-splash-screen` | Configures and controls the branded native launch screen while app startup hydration completes. |
 | `expo-network` | Connectivity listener used to retry catalog data after reconnect. |
 | `expo-updates` | Reloads after a language change that changes native RTL layout direction. |
 | `lucide-react-native` | UI icons. |
